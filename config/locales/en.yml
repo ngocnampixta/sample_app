@@ -37,4 +37,6 @@ en:
   news: "News"
   sign_up_now: "Sign up Now"
   invalid_login: "Invalid email/password combination"
-
+  flash_messages:
+    profile_updated: "Profile updated"
+    please_login: "Please login."

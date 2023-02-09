@@ -3,6 +3,10 @@ class UsersController < ApplicationController
   before_action :correct_user,
                 only: [:edit, :update]
 
+  def index
+    @users = User.all
+  end
+
   def new
     # debugger
     @user = User.new
@@ -21,7 +25,7 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome #{@user.name} to the Sample App!"
       redirect_to user_url(@user)
     else
-      render "new"
+      render :new
     end
   end
 
@@ -32,17 +36,17 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = I18n.t("flash_messages.profile_updated")
       redirect_to @user
     else
-      render "edit"
+      render :edit
     end
   end
 
   def logged_in_user
     unless logged_in?
       store_location
-      flash[:danger] = "Please log in."
+      flash[:danger] = I18n.t("flash_messages.please_login")
       redirect_to login_url
     end
   end

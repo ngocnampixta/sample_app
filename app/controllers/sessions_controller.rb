@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     else
       # Create an error message.
       flash.now[:danger] = I18n.t("invalid_login") # Not quite right!
-      render "new"
+      render :new
     end
   end
 
