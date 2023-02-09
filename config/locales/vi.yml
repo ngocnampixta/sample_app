@@ -1,0 +1,9 @@
+vi:
+  home: "Trang chủ"
+  help: "Trợ giúp"
+  login: "Đăng nhập"
+  about: "Giới thiệu"
+  contact: "Liên hệ"
+  news: "Tin tức"
+  sign_up_now: "Đăng kí ngay"
+  invalid_login: "Email hoặc mật khẩu không chính xác"
