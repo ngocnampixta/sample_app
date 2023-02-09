@@ -6701,3 +6701,396 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.5ms | Allocations: 6795)
 
 
+Started GET "/" for 127.0.0.1 at 2023-02-09 15:16:40 +0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 112.6ms | Allocations: 39296)
+  Rendered layouts/_rails_default.erb (Duration: 10.8ms | Allocations: 5287)
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 90)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 18.2ms | Allocations: 9568)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 146.3ms | Allocations: 55824)
+Completed 200 OK in 173ms (Views: 148.4ms | ActiveRecord: 4.3ms | Allocations: 58714)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2023-02-09 15:16:42 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 273)
+  Rendered layouts/_rails_default.erb (Duration: 14.7ms | Allocations: 5043)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 777)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 6958)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 0.5ms | Allocations: 8743)
+
+
+Started GET "/users/32/edit" for 127.0.0.1 at 2023-02-09 15:16:44 +0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 32 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:51:in `correct_user'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms | Allocations: 1492)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-09 15:16:44 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 648)
+  Rendered layouts/_rails_default.erb (Duration: 9.3ms | Allocations: 4812)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 807)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 7189)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.4ms | Allocations: 7435)
+
+
+Started GET "/users/35/edit" for 127.0.0.1 at 2023-02-09 15:16:51 +0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:51:in `correct_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 213)
+  Rendered users/_form.html.erb (Duration: 9.4ms | Allocations: 3532)
+  Rendered users/edit.html.erb within layouts/application (Duration: 10.5ms | Allocations: 3864)
+  Rendered layouts/_rails_default.erb (Duration: 9.6ms | Allocations: 4812)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 9836)
+Completed 200 OK in 28ms (Views: 22.6ms | ActiveRecord: 0.6ms | Allocations: 11733)
+
+
+Started PATCH "/users/35" for 127.0.0.1 at 2023-02-09 15:17:00 +0700
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"nguyenngocnam123", "email"=>"xxx@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"35"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:51:in `correct_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:34:in `update'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'xxx@gmail.com' AND `users`.`id` != 35 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:34:in `update'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `users`.`name` = 'nguyenngocnam123', `users`.`updated_at` = '2023-02-09 08:17:00.953064', `users`.`password_digest` = '$2a$10$MUn60XaR0HPcfr0KV7phtuP8HvjVBx4P8msj5ZqvsIWvmsnwiUv1O' WHERE `users`.`id` = 35[0m
+  ↳ app/controllers/users_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:34:in `update'
+Redirected to http://127.0.0.1:3000/users/35
+Completed 302 Found in 105ms (ActiveRecord: 10.8ms | Allocations: 6623)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2023-02-09 15:17:00 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 64)
+  Rendered layouts/_rails_default.erb (Duration: 9.7ms | Allocations: 5127)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 730)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 6851)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.4ms | Allocations: 7622)
+
+
+Started GET "/logout" for 127.0.0.1 at 2023-02-09 15:17:03 +0700
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms | Allocations: 983)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-09 15:17:03 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 655)
+  Rendered layouts/_rails_default.erb (Duration: 9.6ms | Allocations: 4836)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 134)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 6545)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 6790)
+
+
+Started GET "/users/32/edit" for 127.0.0.1 at 2023-02-09 15:17:07 +0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"32"}
+Redirected to http://127.0.0.1:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 327)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-02-09 15:17:07 +0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1492)
+  Rendered layouts/_rails_default.erb (Duration: 11.8ms | Allocations: 4875)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 7450)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 8019)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-02-09 15:17:21 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"xxx@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'xxx@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/users/35
+Completed 302 Found in 80ms (ActiveRecord: 0.5ms | Allocations: 1143)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2023-02-09 15:17:21 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 64)
+  Rendered layouts/_rails_default.erb (Duration: 6.7ms | Allocations: 4990)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 731)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 6709)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.7ms | Allocations: 7480)
+
+
+Started GET "/users/32/edit" for 127.0.0.1 at 2023-02-09 15:17:34 +0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 32 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:51:in `correct_user'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms | Allocations: 1364)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-09 15:17:34 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 648)
+  Rendered layouts/_rails_default.erb (Duration: 9.2ms | Allocations: 4849)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 807)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 7224)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.4ms | Allocations: 7470)
+
+
+Started GET "/users/32/edit" for 127.0.0.1 at 2023-02-09 15:17:43 +0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 32 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:51:in `correct_user'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms | Allocations: 1376)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-09 15:17:43 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 648)
+  Rendered layouts/_rails_default.erb (Duration: 8.5ms | Allocations: 4837)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 807)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 7212)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.4ms | Allocations: 7457)
+
+
+Started GET "/logout" for 127.0.0.1 at 2023-02-09 15:17:47 +0700
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms | Allocations: 945)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-09 15:17:47 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 659)
+  Rendered layouts/_rails_default.erb (Duration: 11.1ms | Allocations: 4946)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 129)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 6657)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 6904)
+
+
+Started GET "/users/32/edit" for 127.0.0.1 at 2023-02-09 15:17:58 +0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"32"}
+Redirected to http://127.0.0.1:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 338)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-02-09 15:17:58 +0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 924)
+  Rendered layouts/_rails_default.erb (Duration: 9.7ms | Allocations: 4947)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 129)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 6922)
+Completed 200 OK in 14ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 7168)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-02-09 15:18:12 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"xxx@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'xxx@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/users/35
+Completed 302 Found in 75ms (ActiveRecord: 0.5ms | Allocations: 1001)
+
+
+Started GET "/users/35" for 127.0.0.1 at 2023-02-09 15:18:12 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 64)
+  Rendered layouts/_rails_default.erb (Duration: 9.1ms | Allocations: 5011)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 730)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 6729)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.4ms | Allocations: 7499)
+
+
+Started GET "/logout" for 127.0.0.1 at 2023-02-09 15:19:40 +0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 25ms (ActiveRecord: 3.9ms | Allocations: 10558)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-09 15:19:40 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 95.4ms | Allocations: 39198)
+  Rendered layouts/_rails_default.erb (Duration: 8.2ms | Allocations: 5093)
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 452)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 107.8ms | Allocations: 46528)
+Completed 200 OK in 112ms (Views: 110.3ms | ActiveRecord: 0.0ms | Allocations: 48336)
+
+
+Started GET "/users/32/edit" for 127.0.0.1 at 2023-02-09 15:19:44 +0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"32"}
+Redirected to http://127.0.0.1:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 481)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-02-09 15:19:44 +0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2751)
+  Rendered layouts/_rails_default.erb (Duration: 9.1ms | Allocations: 4879)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 8717)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 9296)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-02-09 15:19:54 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"xxx@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'xxx@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/users/32/edit
+Completed 302 Found in 78ms (ActiveRecord: 0.6ms | Allocations: 1198)
+
+
+Started GET "/users/32/edit" for 127.0.0.1 at 2023-02-09 15:19:54 +0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 32 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:51:in `correct_user'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms | Allocations: 1967)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-09 15:19:54 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 650)
+  Rendered layouts/_rails_default.erb (Duration: 7.2ms | Allocations: 4842)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 35 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:30:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 868)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 7279)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.4ms | Allocations: 7528)
+
+
