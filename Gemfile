@@ -3,6 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.0"
 
+gem 'bootstrap-will_paginate', '~> 1.0'
+
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+
+gem 'faker', '~> 1.6', '>= 1.6.6'
+
 gem "byebug", "~> 9.0", ">= 9.0.6"
 
 gem "bootstrap-sass", "~> 3.4.1"

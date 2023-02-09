@@ -28,6 +28,15 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  home: "Home"
+  help: "Help"
+  login: "Login"
+  about: "About"
+  contact: "Contact"
+  news: "News"
+  sign_up_now: "Sign up Now"
+  invalid_login: "Invalid email/password combination"
+  flash_messages:
+    profile_updated: "Profile updated"
+    please_login: "Please login."
